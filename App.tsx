@@ -17,6 +17,12 @@ import AxiosEjemplo from './src/navegacion/AxiosEjemplo';
 import AsyncStorageEjemplo from './src/navegacion/AsyncStorageEjemplo';
 
 
+import Componente01 from './src/simulacro-parcial/Componente01';
+import Props02 from './src/simulacro-parcial/props02';
+import Axios03 from './src/simulacro-parcial/axios03';
+import AsyncStorage04 from './src/simulacro-parcial/asyncStorage04';
+
+
 const Stack = createNativeStackNavigator();
 
 const App = () =>{
@@ -27,7 +33,7 @@ const App = () =>{
       // {/* <TextInputComponents></TextInputComponents>*/}
       // {/*<ListNotasComponents></ListNotasComponents>*/}
        <NavigationContainer>
-          <Stack.Navigator initialRouteName="Home">
+          <Stack.Navigator initialRouteName="Componente01">
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Notas" component={ListNotasComponents} />
             <Stack.Screen name="Avatar" component={AvatarBasic} />
@@ -37,7 +43,14 @@ const App = () =>{
             <Stack.Screen name="Props" component={PropsEjemplo} />
             <Stack.Screen name="Axios" component={AxiosEjemplo} />
             <Stack.Screen name="Async" component={AsyncStorageEjemplo} />
-          </Stack.Navigator>
+
+
+             {/* Pantallas del simulacro parcial */}
+            <Stack.Screen name="Componente01" component={Componente01} />
+            <Stack.Screen name="Props02" component={Props02} />
+            <Stack.Screen name="Axios03" component={Axios03} />
+            <Stack.Screen name="AsyncStorage04" component={AsyncStorage04} />
+            </Stack.Navigator>
        </NavigationContainer>
    // </ScrollView>
 
