@@ -22,6 +22,11 @@ import Props02 from './src/simulacro-parcial/props02';
 import Axios03 from './src/simulacro-parcial/axios03';
 import AsyncStorage04 from './src/simulacro-parcial/asyncStorage04';
 
+import ComponenteParcial01 from './src/primera-parcial/ComponenteParcial01';
+import PropsParcial02 from './src/primera-parcial/PropsParcial02';
+import AxiosParcial03 from './src/primera-parcial/AxiosParcial03';
+import AsyncStorageParcial04 from './src/primera-parcial/AsyncStorageParcial04';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -33,7 +38,7 @@ const App = () =>{
       // {/* <TextInputComponents></TextInputComponents>*/}
       // {/*<ListNotasComponents></ListNotasComponents>*/}
        <NavigationContainer>
-          <Stack.Navigator initialRouteName="Componente01">
+          <Stack.Navigator initialRouteName="ComponenteParcial01">
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Notas" component={ListNotasComponents} />
             <Stack.Screen name="Avatar" component={AvatarBasic} />
@@ -50,6 +55,12 @@ const App = () =>{
             <Stack.Screen name="Props02" component={Props02} />
             <Stack.Screen name="Axios03" component={Axios03} />
             <Stack.Screen name="AsyncStorage04" component={AsyncStorage04} />
+
+              {/* Pantallas del Primera Parcial*/}
+            <Stack.Screen name="ComponenteParcial01" component={ComponenteParcial01} />
+            <Stack.Screen name="PropsParcial02" component={PropsParcial02} />
+            <Stack.Screen name="AxiosParcial03" component={AxiosParcial03} />
+            <Stack.Screen name="AsyncStorageParcial04" component={AsyncStorageParcial04} />
             </Stack.Navigator>
        </NavigationContainer>
    // </ScrollView>

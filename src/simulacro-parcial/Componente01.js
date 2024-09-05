@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { Input } from '@rneui/base';
 
 const Componente01 = () => {
   const navigation = useNavigation();
 
+  const [texto, setTexto] = useState("")
   return (
     <View style={{ padding: 20 }}>
       <Text style={{ fontSize: 24, marginBottom: 20 }}>Pantalla Principal</Text>
 
+      <Input
+        placeholder='Cargar...'
+        keyboardType='default'
+        placeholderTextColor="grey" 
+        onChangeText={setTexto} 
+      />
+
       <Button
         title="Ir a Props02"
-        onPress={() => navigation.navigate('Props02', { nombre: 'Texto', estado: false })}
+        onPress={() => navigation.navigate('Props02', { nombre: texto, estado: false })}
       />
 
       <Button
